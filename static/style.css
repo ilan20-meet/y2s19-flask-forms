@@ -1,3 +1,8 @@
 body {
-    background: white;
+    background-color: slateblue;
+    color: orange;
+}
+
+a {
+	color: orange;
 }

@@ -2,40 +2,34 @@ from databases import *
 from flask import Flask, render_template, url_for, request, redirect
 app = Flask(__name__)
 
+# function for going to the home page
 @app.route('/')
 def home():
-    return render_template('home.html', students=query_all())
+    return render_template('index.html',comments=query_all())
 
-@app.route('/student/<int:student_id>')
-def display_student(student_id):
-    return render_template('student.html', student=query_by_id(student_id))
+#function for viewing all the comments that people left
+@app.route('/viewcomments')
+def display_comments():
+    return render_template('viewcomments.html', comments=query_all())
 
+#function for going to the comment page and adding comments 
 @app.route('/add', methods=['GET', 'POST'])
-def add_student_route():
+def add_comment_route():
     if request.method == 'GET':
         return render_template('add.html')
     else:
-        name = request.form['student_name']
-        year = request.form['student_year']
+        name = request.form['user_name']
+        email = request.form['user_email']
+        comment = request.form['user_comment']
+        add_comment(name, email, comment)
+        return redirect('/#contact')
 
-        add_student(name, year, finished_lab=True)
-        return redirect(url_for('home'))
-
-@app.route('/delete/<int:student_id>', methods=['POST'])
-def delete_student_route(student_id):
-	print(student_id)
-	delete_student_id(student_id)
+#function for deleting a comment (not used at the moment)
+@app.route('/delete/<int:id_num>', methods=['POST'])
+def delete_comment_route(id_num):
+	print(id_num)
+	delete_comment_id(id_num)
 	return redirect(url_for('home'))
-
-def edit_student_route():
-    if request.method == 'GET':
-        return render_template('edit.html')
-    else:
-        name = request.form['student_name']
-        year = request.form['student_year']
-
-        add_student(name, year, finished_lab=True)
-        return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<!--
+	Snapshot by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Snapshot by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+	</head>
+	<body>
+
+
+		<div class="page-wrap">
+
+			<!-- Nav -->
+				<!-- <nav id="nav">
+					<ul>
+						<li><a href="index.html" class="active"><span class="icon fa-home"></span></a></li>
+						<li><a href="gallery.html"><span class="icon fa-camera-retro"></span></a></li>
+						<li><a href="generic.html"><span class="icon fa-file-text-o"></span></a></li>
+					</ul>
+				</nav> -->
+
+			<!-- Main -->
+				<section id="main">
+
+					<!-- Banner -->
+						<section id="banner">
+							<div class="inner">
+								<h1>Shekulo Tov Integrative Production Plants</h1>
+								<p>Amal Kawar,Ilan Kapilianov,Nevi Gavrieli,Rami Mansour,Sadeen Siaj</p>
+								<ul class="actions">
+									<li><a href="#shekulotov" class="button alt scrolly big" style="background-color: pink;">Continue</a></li>
+								</ul>
+
+							</div>
+						</section>
+
+						<!-- Shekulo Tov -->
+						<section id="shekulotov" style="text-align: center;">
+							<div class="gallery">
+									<header class="special">
+										<h2>Shekulo Tov</h2>
+									</header>
+									<div class="content">
+
+										<ul style="font-size: 40px; font-weight: bold; text-align: left">
+										<li id = "sect2">It's competent in helping and working with people with disabilities.</li>
+								        <li id = "secti2">Shekulo Tov focuses on providing people with disabilities the oppurtunities to persue their dreams and be a part of the community.</li>
+								        <li id = "sectio2">IPP provides the people with jobs through workshop that produces products such as candles, (complete)</li>
+								    </ul>
+									   
+
+
+									</div>
+							</div>
+							<a href="#galleries" class="button scrolly big" style="background-color: pink;">Continue</a>
+						</section>
+
+					<!-- Gallery -->
+						<section id="galleries" style="text-align: center;">
+
+							<!-- Photo Galleries -->
+								<div class="gallery">
+									<header class="special">
+										<h1>Collaborations & Partnerships</h1>
+									</header>
+									<div class="content">
+										<div class="media">
+											<a href="{{url_for('static',filename='2.jpg')}}"><img id = "abc" src="{{url_for('static',filename='2.jpg')}}" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="https://market.marmelada.co.il/photos/570x0/323833.JPG"><img id = "abc" src="https://market.marmelada.co.il/photos/570x0/323833.JPG" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/09.jpg"><img src="/static/images/thumbs/09.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/02.jpg"><img src="/static/images/thumbs/02.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										
+										<!-- <div class="media">
+											<a href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/10.jpg"><img src="images/thumbs/10.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/03.jpg"><img src="images/thumbs/03.jpg" alt="" title="This right here is a caption." /></a>
+										</div>
+										<div class="media">
+											<a href="images/fulls/07.jpg"><img src="images/thumbs/07.jpg" alt="" title="This right here is a caption." /></a>
+										</div> -->
+									</div>
+									<!-- <footer>
+										<a href="gallery.html" class="button big">Full Gallery</a>
+									</footer> -->
+								</div>
+								<a href="#Results" class="button scrolly big" style="background-color: pink;">Continue</a>
+
+						</section>
+
+						<!-- Shekulo Tov -->
+						<section id="Results">
+							<div class="gallery">
+									<header class="special">
+										<h1>Results</h1>
+									</header>
+									<div class="content">
+
+										
+        							<h2> We are expecting an increase of Shekulo Tov's publicity and number of workshops.</h2>
+        
+
+
+									</div>
+							</div>
+						</section>
+
+					<!-- Contact -->
+						<section id="contact">
+							<!-- Social -->
+								<div class="social column">
+									<h3>About Me</h3>
+									    {% for comment in comments %}
+									        <span>{{comment.name}}</span>
+									        <div style="border: solid 2px darkgray; border-radius: 5px; background-color: white; padding: 5px; min-height: 50px; width: 100%; word-wrap: break-word;">{{comment.comment}}
+									        </div>
+									    {% endfor %}
+								</div>
+
+							<!-- Form -->
+								<div class="column">
+									<h3>Get in Touch</h3>
+									<form action="/add" method="post">
+										<div class="field half first">
+											<label for="name">Name</label>
+											<input name="user_name" class="input100" type="text" placeholder="Enter full name">
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input class="input100" type="text" name="user_email" placeholder="Enter email addess">
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea class="input100" name="user_comment" placeholder="Your Comment..." maxlength="200" ></textarea>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Submit" id="submitButton" class="contact100-form-btn"></li>
+										</ul>
+									</form>
+									
+								</div>
+
+						</section>
+
+					<!-- Footer -->
+						<footer id="footer">
+							<div class="copyright">
+								&copy; Untitled Design: <a href="https://templated.co/">TEMPLATED</a>. Images: <a href="https://unsplash.com/">Unsplash</a>.
+							</div>
+						</footer>
+				</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="/static/assets/js/jquery.min.js"></script>
+			<script src="/static/assets/js/jquery.poptrox.min.js"></script>
+			<script src="/static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/static/assets/js/skel.min.js"></script>
+			<script src="/static/assets/js/util.js"></script>
+			<script src="/static/assets/js/main.js"></script>
+
+	</body>
+</html>

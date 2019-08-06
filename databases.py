@@ -1,72 +1,62 @@
-from model import Base, Student
+from model import Base, Comment
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:///students.db?check_same_thread=False')
+engine = create_engine('sqlite:///comments.db?check_same_thread=False')
 Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-def add_student(name, year, finished_lab=True):
+def add_comment(name, email, comment):
 	"""
-	Add a student to the database, given
-	their name, year, and whether they have
-	finished the lab.
+	Add a comment to the database, given
+	their name, email, and the comment.
 	"""
-	student_object = Student(
+	comment_object = Comment(
 		name=name,
-		year=year,
-		finished_lab=finished_lab)
-	session.add(student_object)
+		email=email,
+		comment=comment)
+	session.add(comment_object)
 	session.commit()
 
 def query_by_name(name):
 	"""
-	Find the first student in the database,
+	Find the first comment in the database,
 	by their name
 	"""
-	student = session.query(Student).filter_by(
+	comment = session.query(Comment).filter_by(
 		name=name).first()
-	return student
+	return comment
 
 def query_all():
 	"""
-	Print all the students in the database.
+	Print all the comments in the database.
 	"""
-	students = session.query(Student).all()
-	return students
+	comments = session.query(Comment).all()
+	return comments
 
-def delete_student_id(id_number):
+def delete_comment_id(id_number):
 	"""
-	Delete all students with a certain name
-	from the database.
+	Delete comment with cetain id from the database.
 	"""
-	session.query(Student).filter_by(
-		student_id=id_number).delete()
+	session.query(Comment).filter_by(
+		id_num=id_number).delete()
 	session.commit()
 
-def delete_student_name(name):
+def delete_comment_name(name):
 	"""
-	Delete all students with a certain name
+	Delete all commments with a certain name
 	from the database.
 	"""
-	session.query(Student).filter_by(
+	session.query(Comment).filter_by(
 		name=name).delete()
 	session.commit()
 
-def update_lab_status(name, newName, newYear):
+def query_by_id(id_num):
 	"""
-	Update a student in the database, with 
-	whether or not they have finished the lab
+	find comment with certain id
 	"""
-	student_object = session.query(Student).filter_by(
-		name=name).first()
-	student_object.name = newName
-	student_object.year = newYear
-	session.commit()
-
-def query_by_id(student_id):
-    student = session.query(Student).filter_by(
-        student_id=student_id).first()
-    return student
+	comment = session.query(Comment).filter_by(
+        id_num=id_num).first()
+	return comment

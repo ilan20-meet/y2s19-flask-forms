@@ -1,0 +1,14 @@
+body{
+  background-color: #FFBF69;
+}
+textarea {
+  resize: none;
+  font-size: 20px;
+  border-radius: 50px;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-right: 40px;
+}
+p{
+  font-size: 28px;
+}

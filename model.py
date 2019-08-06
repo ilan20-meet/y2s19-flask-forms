@@ -5,31 +5,29 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
-class Student(Base):
+class Comment(Base):
 	"""
-	Create a students table. This table has
+	Create a commentss table. This table has
 	4 columns.
 
-	The first column, student_id is
+	The first column, id_num is
 	the primary key for the table. The second
 	column is a string, representing the name of
-	the student. The third column is an integer,
-	representing the year the student was born. The last
-	column is a Boolean, representing whether or not the student
-	has completed the lab.
+	the user. The third column is a string representing the email of the user.
+	The last column is a string representing the comment of the user.
 	"""
-	__tablename__ = 'student'
-	student_id = Column(Integer, primary_key=True)
+	__tablename__ = 'comment'
+	id_num = Column(Integer, primary_key=True)
 	name = Column(String)
-	year = Column(Integer)
-	finished_lab = Column(Boolean)
+	email = Column(String)
+	comment = Column(String)
 
 	def __repr__(self):
-		return ("Student Name: {}\n"
-				"Student Year: {} \n"
-				"Has Finished Lab: {}").format(
+		return ("User Name: {}\n"
+				"User Email: {} \n"
+				"Comment: {}").format(
 					self.name,
-					self.year,
-					self.finished_lab)
+					self.email,
+					self.comment)
 
 

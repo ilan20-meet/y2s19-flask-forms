@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+	window.setInterval(function(){
+		$(function(){
+	        $('a').each(function(){
+	            if ($(this).prop('href') == window.location.href) {
+	                $(this).addClass('active'); $(this).parents('li').addClass('active');
+	            }
+	            else{
+	            	$(this).removeClass('active'); $(this).parents('li').removeClass('active');
+	            }
+	        });
+	    });
+	}, 100);
+</script>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+	{% block head%}{% endblock %}
+</head>
+<body>
+	<!-- This html page is what adds the navbar to every html page that has "extends layout.html" -->
+
+	<!-- this is the navbar -->
+	<ul>
+		<li><a href="#section1">Welcome</a></li>
+        <li><a href="#section2">Shekulo Tov</a></li>
+        <li><a href="#section3">Solution</a></li>
+        <li><a href="#section4">Results</a></li>
+        <li class="rightButton"><a href="/">Home</a></li>
+        <li class="rightButton"><a href="add">Contact</a></li>
+        <li class="rightButton"><a href="/viewcomments">Comments</a></li>
+    </ul>
+
+    <!-- this says that the content of each html page will be here (after the navbar) -->
+    {% block content %} {% endblock %}
+</body>
+</html>

@@ -1,8 +1,215 @@
 body {
-    background-color: slateblue;
-    color: orange;
+  margin:0;
 }
 
-a {
-	color: orange;
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Poppins-Regular;
+  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+}
+
+body, html {
+  height: 100%;
+  font-family: Poppins-Regular, sans-serif;
+}
+
+/*styles for the navbar (they also change regular lists)*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+  height: 60px; 
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  height: 60px;
+  font-size: 20px;
+}
+
+li a:hover:not(.active) {
+  background-color: #FF9F1C;
+  color: black;
+}
+/*styles for the navbar end here*/
+
+.active {
+    color: black;
+    background-color: #2EC4B6;
+}
+
+/*this html style creates the smooth scrolling effect*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*the styles for each section in the main page starts here*/
+#section1 {
+  height: 950px;
+  background-color: #CBF3F0;
+  
+  /* this is for setting the background to a picture*/
+  /*background: url(/static/working1.jpg);
+  background-repeat: no-repeat;
+  background-size: 2100px 900px;*/
+}
+
+#section2 {
+  height: 950px;
+  background-color: #FFBF69;
+}
+
+#section3 {
+  height: 950px;
+
+  background-color: #CBF3F0;
+}
+
+#section4 {
+  height: 950px;
+  background-color: #FFBF69;
+}
+/*the styles for each section in the main page ends here*/
+
+.rightButton{
+  float: right;
+} 
+
+
+.inputBox
+{
+  width: 240px;
+  height: 35px;
+}
+#commentBox{
+  text-align: left;
+  width: 240px;
+  height: 200px;
+}
+#submitButton{
+  width: 240px;
+  height: 60px;
+}
+
+textarea{
+  text-align: left;
+}
+
+#sec1{
+  font-size: 120px;
+  text-align: center;
+  position: relative;
+  top: 100px;
+}
+
+#sect1{
+  font-size: 70px;
+  text-align: center;
+  position: relative;
+  top: 100px;
+}
+
+#picsofus{
+  width:20%;
+  height: auto;
+  position: relative;
+  left: 700px;
+  top: 60px;
+}
+
+#sec2{
+  font-size: 100px;
+  text-align: center;
+  position: relative;
+  top: 100px;
+}
+
+#sect2{
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  top: 100px;
+}
+
+#secti2{
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  top: 180px;
+}
+
+#sectio2{
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  top: 200px;
+}
+
+#challenge{
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  top: 250px;
+}
+
+#picsofplane{
+  width:13%;
+  height: auto;
+  position: relative;
+  left: 1500px;
+  top: 110px;
+}
+
+#picsofworld{
+  width:13%;
+  height: auto;
+  position: relative;
+  left: -150px;
+  top: -400px;
+}
+
+#picsoflight{
+  width:13%;
+  height: auto;
+  position: relative;
+  left: -150px;
+  top: -400px
+}
+
+#solu{
+   font-size: 100px;
+  text-align: center;
+  position: relative;
+  top: 50px;
+
 }

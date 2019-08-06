@@ -1,0 +1,19 @@
+<!-- adding the navbar -->
+{% extends "layout.html" %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='table.css') }}">
+    <title>Home</title>
+    {% endblock %}
+
+
+    {% block content %}
+    <h1>Welcome to the home page!</h1>
+    
+    <h1> Comments </h1>
+    {% for comment in comments %}
+        <p>{{comment.name}}</p>
+        <textarea rows="3" cols="60" readonly>{{comment.comment}}
+        </textarea>
+    {% endfor %}
+
+    {% endblock %}

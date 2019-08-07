@@ -6,10 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Snapshot by TEMPLATED</title>
+		<title>Integrative Production Plants</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/style.scss')}}" />
+
 	</head>
 	<body>
 
@@ -31,56 +33,133 @@
 					<!-- Banner -->
 						<section id="banner">
 							<div class="inner">
+								<img id = "logo" src ="{{url_for('static',filename = 'shekulotov.png')}}">
 								<h1>Shekulo Tov Integrative Production Plants</h1>
-								<p>Amal Kawar,Ilan Kapilianov,Nevi Gavrieli,Rami Mansour,Sadeen Siaj</p>
+								<p>Amal Kawar, Ilan Kapilianov, Nevi Gavrieli, Rami Mansour, Sadeen Siaj</p>
 								<ul class="actions">
-									<li><a href="#shekulotov" class="button alt scrolly big" style="background-color: pink;">Continue</a></li>
+									<li><a href="#shekulotov" class="button alt scrolly big" style="background-color: #AC3B61;">Continue</a></li>
 								</ul>
 
 							</div>
 						</section>
 
 						<!-- Shekulo Tov -->
-						<section id="shekulotov" style="text-align: center;">
+						<section id="shekulotov" style="text-align: center; background-color: #EEE2DC; padding-bottom: 90px; margin-bottom: 0px;">
 							<div class="gallery">
 									<header class="special">
-										<h2>Shekulo Tov</h2>
+										<h1 style="font-size: 70px; color: #123C69">Shekulo Tov</h1>
 									</header>
 									<div class="content">
 
-										<ul style="font-size: 40px; font-weight: bold; text-align: left">
-										<li id = "sect2">It's competent in helping and working with people with disabilities.</li>
-								        <li id = "secti2">Shekulo Tov focuses on providing people with disabilities the oppurtunities to persue their dreams and be a part of the community.</li>
-								        <li id = "sectio2">IPP provides the people with jobs through workshop that produces products such as candles, (complete)</li>
-								    </ul>
+										
+								        <p id = "secti2" style="width: 100%; font-size: 50px; color: #123C69">Provides people with disabilities to be a part of the community</p>
+								        <br>
+								        <h1 style="width: 100%; font-size: 60px; color: #123C69">Integrative Production Plants</h1>
+								        <p id = "sectio2" style="width: 100%; font-size: 50px; color: #123C69">Gives the people jobs through workshops</p>
+
+								       <img style="width: 500px; position: relative; left: 1300px; top:-300px;" src="{{url_for('static',filename = 'wheelchair.png')}}">
+								       <img style="width: 500px; position: relative; left: 700px; top:-400px;" src="{{url_for('static',filename = 'heart.png')}}">
 									   
+
 
 
 									</div>
 							</div>
-							<a href="#galleries" class="button scrolly big" style="background-color: pink;">Continue</a>
+							<a href="#Challenge" class="button scrolly big" style="background-color: #AC3B61;position: relative;bottom: 330px; ">Continue</a>
+						</section>
+
+						<!-- Challenge -->
+						<section id="Challenge" style="text-align: center; background-color: #EDC7B7; padding-bottom: 90px;">
+							<div class="gallery">
+									<header class="special">
+										<h1 style="font-size: 70px; color: #123C69">Challenge</h1>
+									</header>
+									<div class="content">
+
+										
+								        <p id = "secti2" style="width: 100%; font-size: 150px; color: #123C69;z-index: 1">Expanding</p>
+
+								        <svg viewBox="0 0 3387 1270" style="position: relative; top: -600px;">
+										  <path id="planePath" class="planePath" d="M-226 626c439,4 636,-213 934,-225 755,-31 602,769 1334,658 562,-86 668,-698 266,-908 -401,-210 -893,189 -632,630 260,441 747,121 1051,91 360,-36 889,179 889,179"/>
+										  
+										  <g id="plane">
+										   <polygon class="fil1" points="-141,-10 199,0 -198,-72 -188,-61 -171,-57 -184,-57 "/>
+										   <polygon class="fil2" points="199,0 -141,-10 -163,63 -123,9 "/>
+										   <polygon class="fil3" points="-95,39 -113,32 -123,9 -163,63 -105,53 -108,45 -87,48 -90,45 -103,41 -94,41 "/>
+										   <path class="fil4" d="M-87 48l-21 -3 3 8 19 -4 -1 -1zm-26 -16l18 7 -2 -1 32 -7 -29 1 11 -4 -24 -1 -16 -18 10 23zm10 9l13 4 -4 -4 -9 0z"/>
+										   <polygon class="fil1" points="-83,28 -94,32 -65,31 -97,38 -86,49 -67,70 199,0 -123,9 -107,27 "/>
+										  </g>
+										  <!-- Define the motion path animation -->
+										    <animateMotion 
+										                   xlink:href="#plane"
+										                   dur="5s" 
+										                   repeatCount="indefinite" 
+										                   rotate="auto">
+										      <mpath xlink:href="#planePath" />
+										    </animateMotion >
+										</svg>
+										<style>
+											@keyframes fade {
+												0% {opacity: 0}
+												12% {opacity: 1}
+												84% {opacity: 1}
+												100% {opacity: 0}
+											}
+
+											.popin{
+												animation-name: fade;
+												animation-duration: 5s ;
+												animation-iteration-count:infinite;
+												opacity: 0;
+											}
+
+											.animation{
+        										transform:opacity(0); 
+        									}
+
+        									#Challenge:hover .animation{
+        										transform:scale(0); 
+        										animation-name:fade;
+        										animation-duration: 5s;
+        										animation-iteration-count: infinite;
+        									}
+										</style>
+										<p class = "popin" style="position:absolute; left:300px; top:400px; font-size:60px; animation-delay:0.5s;">Outreach</p>
+										<p class = "popin" style="position:absolute; left:600px; top:500px; font-size:60px;animation-delay:1.2s ">Collaborations</p>
+										<p class = "popin" style="position:absolute; left:1100px; top:600px; font-size:60px;animation-delay:3.6s ">publicity</p>
+
+
+
+							
+									   
+
+
+
+									</div>
+							</div>
+							<a href="#galleries" class="button scrolly big" style="background-color: #AC3B61;position: relative;bottom: 650px; ">Continue</a>
 						</section>
 
 					<!-- Gallery -->
-						<section id="galleries" style="text-align: center;">
+						<section id="galleries" style="text-align: center; background-color: #EEE2DC; padding-bottom: 190px;">
 
 							<!-- Photo Galleries -->
 								<div class="gallery">
 									<header class="special">
-										<h1>Collaborations & Partnerships</h1>
+										<h1 style="font-size: 70px; color: #123C69">Collaborations & Partnerships</h1>
 									</header>
 									<div class="content">
 										<div class="media">
-											<a href="{{url_for('static',filename='2.jpg')}}"><img id = "abc" src="{{url_for('static',filename='2.jpg')}}" alt="" title="This right here is a caption." /></a>
+											<a href="{{url_for('static',filename='2.jpg')}}"><img id = "abc" src="{{url_for('static',filename='2.jpg')}}" alt="" title="A shop the provides jobs for people with disabilities" /></a>
 										</div>
 										<div class="media">
-											<a href="https://market.marmelada.co.il/photos/570x0/323833.JPG"><img id = "abc" src="https://market.marmelada.co.il/photos/570x0/323833.JPG" alt="" title="This right here is a caption." /></a>
+											<a href="https://market.marmelada.co.il/photos/570x0/323833.JPG"><img id = "abc" src="https://market.marmelada.co.il/photos/570x0/323833.JPG" alt="" title="NGO that provides houses for people with disabilities" /></a>
 										</div>
 										<div class="media">
-											<a href="images/fulls/09.jpg"><img src="/static/images/thumbs/09.jpg" alt="" title="This right here is a caption." /></a>
+											<a href="{{url_for('static',filename='bj.jpg')}}"><img id = "abc" src="{{url_for('static',filename='bj.jpg')}}" alt="" title="Ice cream company that gives back to the community" /></a>
 										</div>
 										<div class="media">
-											<a href="images/fulls/02.jpg"><img src="/static/images/thumbs/02.jpg" alt="" title="This right here is a caption." /></a>
+											<a href="{{url_for('static',filename='0.jpg')}}"><img id = "abc" src="{{url_for('static',filename='0.jpg')}}" alt="" title="NGO that specialize at helping people with disabilities" /></a>
 										</div>
 										
 										<!-- <div class="media">
@@ -100,32 +179,98 @@
 										<a href="gallery.html" class="button big">Full Gallery</a>
 									</footer> -->
 								</div>
-								<a href="#Results" class="button scrolly big" style="background-color: pink;">Continue</a>
+								<a href="#Results" class="button scrolly big" style="background-color: #AC3B61;">Continue</a>
 
 						</section>
 
+
 						<!-- Shekulo Tov -->
-						<section id="Results">
-							<div class="gallery">
+						<section id="Results" style="background-color: #EDC7B7; text-align: center; ">
+							<div class="gallery" style="padding-bottom: 0px">
 									<header class="special">
-										<h1>Results</h1>
+										<h1 style="font-size: 70px; color: #123C69; position: relative; ">Future Expectations</h1>
 									</header>
 									<div class="content">
 
 										
-        							<h2> We are expecting an increase of Shekulo Tov's publicity and number of workshops.</h2>
+        							<p style="color: #123C69; width: 100%; font-size: 50px; text-align: center; position: relative; top: -30px; margin-bottom: 0;"> We are expecting an increase in Shekulo Tov's publicity of workshops.</p>
+        							<div style="width:90%; margin:auto; margin-top: -150px">
+        								<style type="text/css">
+        									@keyframes points {
+        										0%{
+        											transform:scale(0); 
+        										}
+        										5%{
+        											transform: scale(1.2);
+        										}
+        										10%{
+        											transform: scale(1)
+        										}
+        										100%{
+        											transform: scale(1)
+        										}
+        									}
+        									.animation{
+        										transform:scale(0); 
+        									}
+
+        									#Results:hover .animation{
+        										transform:scale(0); 
+        										animation-name: points;
+        										animation-duration: 10s;
+        										animation-iteration-count: infinite;
+        									}
+        								</style>
+        								<div style="margin-left:100px">
+		        							<img src="/static/map.png" style="position:relative;">
+		        							
+			        							<img src="/static/point.png" class="animation" style="position: absolute;left: 220px;width: 800px; top:150px; animation-delay: 0.2s;">
+			        							<img src="/static/point.png" class="animation"style="position: absolute;left: 320px;top:400px; width: 800px; animation-delay: 0.3s;">
+			        							<img src="/static/point.png" class="animation" style="position: absolute;left: 300px;top:550px; width: 800px; animation-delay: 0.4s;">
+			        							<img src="/static/point.png" class="animation" style="position: absolute;left: 620px;top:400px; width: 800px; animation-delay: 0.5s;">
+			        							<img src="/static/point.png" class="animation" style="position: absolute;left: 620px;top:200px; width: 800px; animation-delay: 0.6s;">
+			        							<img src="/static/point.png" class="animation" style="position: absolute;left: 520px;top:300px; width: 800px; animation-delay: 0.7s;">
+			        							<img src="/static/point.png" class="animation" style="position: absolute;left: 820px;top:100px; width: 800px; animation-delay: 0.8s;">
+			        							<img src="/static/point.png" class="animation" style="position: absolute;left: 1020px;top:500px; width: 800px; animation-delay: 0.9s;" >
+			        							<img src="/static/point.png" class="animation" style="position: absolute;left: 920px;top:200px; width: 800px; animation-delay: 1s;">
+			        							<img src="/static/point.png" class="animation" style="position: absolute;left: 820px;top:250px; width: 800px; animation-delay: 1.1s;">
+			        						
+		        						</div>
+		        					</div>
+		        					
         
 
 
 									</div>
 							</div>
+							<a href="#thankyou" class="button scrolly big" style="background-color: #AC3B61; margin-bottom: 20px">Continue</a>
+						</section>
+
+						<!-- thank you -->
+						<section id="thankyou" style="text-align: center; background-color: #EEE2DC; padding-bottom: 3100px;">
+							<div class="gallery">
+									<header class="special">
+										<h1 style="font-size: 170px; color: #123C69; position: relative; top: 200px;">Thank you!</h1>
+									</header>
+									<div class="content" class="heart">
+
+										
+								        
+									   
+	<div class="heart" style="position: relative;top: 200px;"></div>
+
+
+
+									</div>
+							</div>
+							
 						</section>
 
 					<!-- Contact -->
 						<section id="contact">
 							<!-- Social -->
 								<div class="social column">
-									<h3>About Me</h3>
+									<h3>Comments</h3>
 									    {% for comment in comments %}
 									        <span>{{comment.name}}</span>
 									        <div style="border: solid 2px darkgray; border-radius: 5px; background-color: white; padding: 5px; min-height: 50px; width: 100%; word-wrap: break-word;">{{comment.comment}}
@@ -135,7 +280,7 @@
 
 							<!-- Form -->
 								<div class="column">
-									<h3>Get in Touch</h3>
+									<h3>Write A Massege</h3>
 									<form action="/add" method="post">
 										<div class="field half first">
 											<label for="name">Name</label>

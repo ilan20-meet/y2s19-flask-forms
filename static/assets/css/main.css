@@ -1608,7 +1608,7 @@
 
 @media screen and (max-width: 736px) {
 
-	#footer {
+#footer {
 		padding: 3em 0 1em 0;
 	}
 
@@ -1616,5 +1616,70 @@
 
 #abc{
 	width: 10000px;
-	height:295px;
+	height:400px;
+}
+
+
+#logo{
+	position: relative;
+	left: 8%;
+}
+
+html{
+  background-color: #EDC7B7;
+}
+
+.planePath {
+  stroke: #D9DADA;
+  stroke-width: .1%;
+  stroke-width: .5%;
+  stroke-dasharray: 1% 2%;
+  stroke-linecap: round;
+  fill: none;
+}
+
+.fil1 {
+  fill: #D9DADA;
+}
+
+.fil2 {
+  fill: #C5C6C6;
+}
+
+.fil4 {
+  fill: #9D9E9E;
+}
+
+.fil3 {
+  fill: #AEAFB0;
+}
+
+body {
+  background-color: #222;
+}
+.heart {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+.heart:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: animation 3.2s cubic-bezier(1, 0, 0, 1) 0.5s infinite both alternate;
+  background-image: linear-gradient(-45deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #eb7d7d 6.2625%, transparent 6.2625%), linear-gradient(45deg, #e03b3b 6.2625%, transparent 6.2625%), linear-gradient(135deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #871515 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #b31c1c 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(45deg, #e45151 6.2625%, transparent 6.2625%), linear-gradient(135deg, #871515 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(135deg, #e45151 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #e03b3b 6.2625%, transparent 6.2625%), linear-gradient(45deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #eb7d7d 6.2625%, transparent 6.2625%), linear-gradient(45deg, #871515 6.2625%, transparent 6.2625%), linear-gradient(135deg, #b31c1c 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #e03b3b 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(45deg, #eb7d7d 6.2625%, transparent 6.2625%), linear-gradient(135deg, #871515 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #b31c1c 6.2625%, transparent 6.2625%), linear-gradient(45deg, #e03b3b 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #b31c1c 6.2625%, transparent 6.2625%), linear-gradient(135deg, #eb7d7d 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #b31c1c 6.2625%, transparent 6.2625%), linear-gradient(135deg, #871515 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #e45151 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #b31c1c 6.2625%, transparent 6.2625%), linear-gradient(45deg, #871515 6.2625%, transparent 6.2625%), linear-gradient(135deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #e45151 6.2625%, transparent 6.2625%), linear-gradient(135deg, #871515 6.2625%, transparent 6.2625%), linear-gradient(135deg, #e45151 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #e45151 6.2625%, transparent 6.2625%), linear-gradient(45deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(135deg, #eb7d7d 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(135deg, #e03b3b 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(135deg, #eb7d7d 6.2625%, transparent 6.2625%), linear-gradient(45deg, #eb7d7d 6.2625%, transparent 6.2625%), linear-gradient(135deg, #b31c1c 6.2625%, transparent 6.2625%), linear-gradient(-45deg, #c91f1f 6.2625%, transparent 6.2625%), linear-gradient(-135deg, #e45151 6.2625%, transparent 6.2625%), linear-gradient(45deg, #e03b3b 6.2625%, transparent 6.2625%), linear-gradient(135deg, #871515 6.2625%, transparent 6.2625%);
+  background-position: 64px 206px, 123px 207px, 89px 15px, 131px 170px, 11px 127px, 212px 169px, 153px 61px, 136px 35px, 13px 11px, 142px 111px, 47px 185px, 109px 212px, 200px 198px, 112px 198px, 48px 82px, 142px 82px, 127px 30px, 227px 173px, 67px 138px, 44px 183px, 194px 110px, 109px 212px, 48px 236px, 11px 29px, 193px 156px, 101px 190px, 136px 45px, 60px 133px, 57px 81px, 212px 191px, 202px 86px, 186px 50px, 126px 222px, 154px 220px, 168px 11px, 205px 68px, 186px 177px, 223px 197px, 28px 143px, 164px 98px, 152px 23px, 133px 65px, 112px 10px, 149px 69px, 73px 111px, 105px 202px, 144px 220px, 48px 48px, 57px 153px, 236px 222px;
+}
+@keyframes animation {
+  50%, 100% {
+    background-position: 60px 60px, 60px 60px, 30px 90px, 30px 90px, 60px 120px, 60px 120px, 90px 30px, 60px 60px, 60px 60px, 90px 90px, 60px 90px, 90px 120px, 90px 120px, 60px 150px, 90px 150px, 90px 60px, 90px 60px, 120px 90px, 120px 90px, 90px 120px, 90px 120px, 120px 150px, 120px 150px, 90px 180px, 120px 180px, 150px 60px, 120px 60px, 150px 90px, 120px 90px, 150px 120px, 150px 120px, 120px 150px, 120px 150px, 150px 180px, 120px 180px, 150px 30px, 180px 60px, 180px 60px, 150px 90px, 150px 90px, 180px 120px, 150px 120px, 180px 150px, 150px 150px, 180px 60px, 180px 60px, 210px 90px, 210px 90px, 180px 120px, 180px 120px;
+  }
 }

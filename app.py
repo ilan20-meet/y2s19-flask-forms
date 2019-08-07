@@ -1,6 +1,17 @@
 from databases import *
 from flask import Flask, render_template, url_for, request, redirect
+
+from flask_mail import Mail, Message
 app = Flask(__name__)
+
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'c2shekulotov@gmail.com' #fix
+app.config['MAIL_PASSWORD'] = 'groupc22' #fix
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+
+mail = Mail(app)
 
 # function for going to the home page
 @app.route('/')
@@ -22,6 +33,9 @@ def add_comment_route():
         email = request.form['user_email']
         comment = request.form['user_comment']
         add_comment(name, email, comment)
+        msg = Message('Hello', sender = 'c2shekulotov@gmail.com', recipients = ['amalkawar49@gmail.com'])
+        msg.body = name+email+comment
+        mail.send(msg)
         return redirect('/#contact')
 
 #function for deleting a comment (not used at the moment)
